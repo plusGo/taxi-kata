@@ -46,6 +46,17 @@ public class TaxiTest {
         // when
         final double money = taxi.calculate(9, 0);
         // then
+        //1.期望值，2.实际值
         Assert.assertEquals(money, 12, 0.01);
+    }
+
+    @Test
+    public void should_be_13_when_9_wait_4() {
+        // given
+        final Taxi taxi = new Taxi();
+        // when
+        final double money = taxi.calculate(9, 4);
+        // then
+        Assert.assertEquals(13, money, 0.01);
     }
 }
